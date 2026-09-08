@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Tech Store - Laptops, smartphones, accessories and gaming products."
+    >
+
+    <title>Tech Store | Premium Electronics</title>
+
+    <link rel="stylesheet" href="tech.css">
+</head>
+
+<body>
+
+<!-- =====================================================
+     HEADER
+     ===================================================== -->
+
+<header class="modern-header">
+    <nav class="modern-nav" aria-label="Main navigation">
+
+        <a class="modern-brand" href="index.html" aria-label="Tech Store home">
+            <span class="modern-brand-mark">TS</span>
+            <span>Tech Store</span>
+        </a>
+
+        <button
+            id="mobileMenuBtn"
+            class="modern-menu-btn"
+            type="button"
+            aria-label="Toggle menu"
+            aria-expanded="false"
+        >
+            ☰
+        </button>
+
+        <div class="modern-links" id="navLinks">
+            <a href="index.html" aria-current="page">Home</a>
+            <a href="#products">Products</a>
+            <a href="#deals">Deals</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </div>
+
+        <div class="modern-actions">
+
+            <button
+                id="darkModeBtn"
+                class="icon-btn"
+                type="button"
+                aria-label="Toggle dark mode"
+            >
+                🌙
+            </button>
+
+            <button
+                id="cartBtn"
+                class="icon-btn"
+                type="button"
+                aria-label="Open shopping cart"
+            >
+                🛒
+                <span id="cartCount" class="cart-count">0</span>
+            </button>
+
+            <button
+                id="loginBtn"
+                class="modern-login"
+                type="button"
+            >
+                Login
+            </button>
+
+            <div id="userArea" class="user-area hidden">
+                <span id="usernameDisplay"></span>
+
+                <button
+                    id="logoutBtn"
+                    class="modern-login"
+                    type="button"
+                >
+                    Logout
+                </button>
+            </div>
+
+        </div>
+    </nav>
+</header>
+
+
+<main>
+
+<!-- =====================================================
+     HERO
+     ===================================================== -->
+
+<section class="hero">
+
+    <div class="para_image">
+
+        <h1>Upgrade Your Tech Lifestyle</h1>
+
+        <p>
+            Discover laptops, smartphones, accessories, gaming gear,
+            and smart devices with premium quality and great prices.
+        </p>
+
+        <a
+            class="img_hero_btn img_hero_btn_veiw"
+            href="#products"
+        >
+            Shop Now
+        </a>
+
+        <a
+            class="img_hero_btn img_hero_btn_contact"
+            href="#deals"
+        >
+            View Deals
+        </a>
+
+        <div class="hero-featured-card">
+
+            <span class="hero-featured-emoji">💻</span>
+
+            <div>
+                <strong>UltraBook Pro X</strong>
+
+                <p>
+                    <span class="price">$999</span>
+                    <span class="old-price">$1199</span>
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="image1">
+        <img
+            src="image\laptop - Copy.jpg"
+            alt="Modern technology setup"
+        >
+    </div>
+
+    <div class="image2">
+        <img
+            src="image\coffe AND LAPTOP.jpg"
+            alt="Laptop workspace"
+        >
+    </div>
+
+    <div class="image3">
+        <img
+            src="image\laptop and phone - Copy.jpg"
+            alt="Technology background"
+        >
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     SERVICES
+     ===================================================== -->
+
+<section class="services_sec" id="services">
+
+    <h2>Why Shop With Us</h2>
+
+    <div class="services_container">
+
+        <div class="services">
+            <i>🚚</i>
+            <h3>Fast Delivery</h3>
+            <p>
+                Get your order delivered to your door in record time.
+            </p>
+        </div>
+
+        <div class="services">
+            <i>🛡️</i>
+            <h3>Warranty</h3>
+            <p>
+                Every product ships with a full manufacturer warranty.
+            </p>
+        </div>
+
+        <div class="services">
+            <i>🔒</i>
+            <h3>Secure Payment</h3>
+            <p>
+                Checkout safely with fully encrypted payment processing.
+            </p>
+        </div>
+
+        <div class="services">
+            <i>🎧</i>
+            <h3>Customer Support</h3>
+            <p>
+                Our support team is available around the clock to help.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     CATEGORIES
+     ===================================================== -->
+
+<section class="categories-sec" id="categories">
+
+    <h2>Shop by Category</h2>
+
+    <div class="category-list">
+
+        <button
+            class="category-btn active"
+            data-category="all"
+            type="button"
+        >
+            All
+        </button>
+
+        <button
+            class="category-btn"
+            data-category="laptops"
+            type="button"
+        >
+            Laptops
+        </button>
+
+        <button
+            class="category-btn"
+            data-category="phones"
+            type="button"
+        >
+            
+        </button>
+
+        <button
+            class="category-btn"
+            data-category="accessories"
+            type="button"
+        >
+            Accessories
+        </button>
+
+        <button
+            class="category-btn"
+            data-category="gaming"
+            type="button"
+        >
+            Gaming
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     PRODUCTS
+     ===================================================== -->
+
+<section class="products-sec" id="products">
+
+    <h2>Our Products</h2>
+
+    <div class="products-toolbar">
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Search products..."
+            aria-label="Search products"
+        >
+
+        <select
+            id="sortSelect"
+            aria-label="Sort products"
+        >
+            <option value="default">Default Sort</option>
+            <option value="price-asc">Price: Low to High</option>
+            <option value="price-desc">Price: High to Low</option>
+            <option value="name-asc">Name A-Z</option>
+        </select>
+
+    </div>
+
+    <div
+        class="products-grid"
+        id="productsGrid"
+    ></div>
+
+</section>
+
+
+<!-- =====================================================
+     PRODUCT MODAL
+     ===================================================== -->
+
+<div
+    class="modal-overlay hidden"
+    id="productModal"
+    role="dialog"
+    aria-modal="true"
+    aria-label="Product details"
+>
+
+    <div class="modal-panel">
+
+        <button
+            class="modal-close"
+            data-modal="productModal"
+            type="button"
+            aria-label="Close"
+        >
+            ✕
+        </button>
+
+        <div id="productModalBody"></div>
+
+    </div>
+
+</div>
+
+
+<!-- =====================================================
+     AUTH MODAL
+     ===================================================== -->
+
+<div
+    class="modal-overlay hidden"
+    id="authModal"
+    role="dialog"
+    aria-modal="true"
+    aria-label="Authentication"
+>
+
+    <div class="modal-panel">
+
+        <button
+            class="modal-close"
+            data-modal="authModal"
+            type="button"
+            aria-label="Close"
+        >
+            ✕
+        </button>
+
+
+        <div class="auth-tabs">
+
+            <button
+                class="auth-tab active"
+                id="loginTabBtn"
+                data-tab="login"
+                type="button"
+            >
+                Login
+            </button>
+
+            <button
+                class="auth-tab"
+                id="signupTabBtn"
+                data-tab="signup"
+                type="button"
+            >
+                Sign Up
+            </button>
+
+        </div>
+
+
+        <!-- LOGIN -->
+
+        <form id="loginForm" class="auth-form">
+
+            <label for="loginEmail">
+                Email
+            </label>
+
+            <input
+                type="email"
+                id="loginEmail"
+                placeholder="Enter your email"
+                required
+            >
+
+            <label for="loginPassword">
+                Password
+            </label>
+
+            <input
+                type="password"
+                id="loginPassword"
+                placeholder="Enter your password"
+                required
+            >
+
+            <p
+                class="form-error"
+                id="loginError"
+            ></p>
+
+            <button type="submit">
+                Login
+            </button>
+
+        </form>
+
+
+        <!-- SIGN UP -->
+
+        <form
+            id="signupForm"
+            class="auth-form hidden"
+        >
+
+            <label for="signupName">
+                Full Name
+            </label>
+
+            <input
+                type="text"
+                id="signupName"
+                placeholder="Your full name"
+                required
+            >
+
+            <label for="signupEmail">
+                Email
+            </label>
+
+            <input
+                type="email"
+                id="signupEmail"
+                placeholder="Your email"
+                required
+            >
+
+            <label for="signupPassword">
+                Password
+            </label>
+
+            <input
+                type="password"
+                id="signupPassword"
+                placeholder="At least 6 characters"
+                required
+            >
+
+            <p
+                class="form-error"
+                id="signupError"
+            ></p>
+
+            <button type="submit">
+                Create Account
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+
+<!-- =====================================================
+     CART
+     ===================================================== -->
+
+<aside
+    class="cart-sidebar"
+    id="cartSidebar"
+    aria-label="Shopping cart"
+>
+
+    <div class="cart-sidebar-header">
+
+        <h2>Your Cart</h2>
+
+        <button
+            class="modal-close"
+            id="cartCloseBtn"
+            type="button"
+            aria-label="Close cart"
+        >
+            ✕
+        </button>
+
+    </div>
+
+    <div id="cartItems"></div>
+
+    <div class="cart-total-row">
+
+        <strong>Total:</strong>
+
+        <span id="cartTotal">
+            $0
+        </span>
+
+    </div>
+
+    <button
+        class="checkout-btn"
+        id="checkoutBtn"
+        type="button"
+    >
+        Checkout
+    </button>
+
+    <p
+        class="form-error"
+        id="cartMessage"
+    ></p>
+
+</aside>
+
+<div
+    class="cart-overlay hidden"
+    id="cartOverlay"
+></div>
+
+
+<!-- =====================================================
+     DEALS
+     ===================================================== -->
+
+<section class="deals-sec" id="deals">
+
+    <h2>
+        Save Up To 30% On Selected Electronics
+    </h2>
+
+    <p>
+        Limited-time deals on laptops, phones, and gaming gear.
+        Grab them before the timer runs out.
+    </p>
+
+    <a
+        class="img_hero_btn img_hero_btn_veiw"
+        href="#products"
+    >
+        Shop Deals
+    </a>
+
+    <div
+        class="countdown"
+        id="countdown"
+    >
+
+        <div class="countdown-box">
+            <span id="cdDays">0</span>
+            <small>Days</small>
+        </div>
+
+        <div class="countdown-box">
+            <span id="cdHours">0</span>
+            <small>Hours</small>
+        </div>
+
+        <div class="countdown-box">
+            <span id="cdMinutes">0</span>
+            <small>Minutes</small>
+        </div>
+
+        <div class="countdown-box">
+            <span id="cdSeconds">0</span>
+            <small>Seconds</small>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     ABOUT
+     ===================================================== -->
+
+<section class="about-sec" id="about">
+
+    <h2>About Tech Store</h2>
+
+    <p>
+        Tech Store has been helping customers find reliable,
+        high-quality electronics since day one. We hand-pick
+        every laptop, phone, and accessory in our catalog so
+        you can shop with confidence.
+    </p>
+
+    <div class="about-stats">
+
+        <div class="stat-box">
+            <strong>5K+</strong>
+            <span>Happy Customers</span>
+        </div>
+
+        <div class="stat-box">
+            <strong>300+</strong>
+            <span>Products</span>
+        </div>
+
+        <div class="stat-box">
+            <strong>24/7</strong>
+            <span>Support</span>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     REVIEWS
+     ===================================================== -->
+
+<section class="reviews-sec" id="reviews">
+
+    <h2>What Our Customers Say</h2>
+
+    <div class="reviews-container">
+
+        <div class="review-card">
+            <p>
+                "Fast shipping and the laptop works perfectly.
+                Will buy again."
+            </p>
+
+            <strong>Sarah M.</strong>
+
+            <span class="rating">
+                ★★★★★
+            </span>
+        </div>
+
+        <div class="review-card">
+            <p>
+                "Great prices and the support team answered
+                all my questions."
+            </p>
+
+            <strong>James K.</strong>
+
+            <span class="rating">
+                ★★★★☆
+            </span>
+        </div>
+
+        <div class="review-card">
+            <p>
+                "My go-to store for phone accessories.
+                Always reliable."
+            </p>
+
+            <strong>Priya D.</strong>
+
+            <span class="rating">
+                ★★★★★
+            </span>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     CONTACT
+     ===================================================== -->
+
+<section class="contact-sec" id="contact">
+
+    <h2>Contact Us</h2>
+
+    <form id="contactForm">
+
+        <label for="contactName">
+            Name
+        </label>
+
+        <input
+            type="text"
+            id="contactName"
+            placeholder="Your name"
+            required
+        >
+
+        <label for="contactEmail">
+            Email
+        </label>
+
+        <input
+            type="email"
+            id="contactEmail"
+            placeholder="Your email"
+            required
+        >
+
+        <label for="contactMessage">
+            Message
+        </label>
+
+        <textarea
+            id="contactMessage"
+            rows="5"
+            placeholder="Write your message..."
+            required
+        ></textarea>
+
+        <p
+            class="form-error"
+            id="contactMsgArea"
+        ></p>
+
+        <button type="submit">
+            Send Message
+        </button>
+
+    </form>
+
+</section>
+
+
+<!-- =====================================================
+     NEWSLETTER
+     ===================================================== -->
+
+<section class="newsletter-sec">
+
+    <h2>Subscribe to Our Newsletter</h2>
+
+    <form id="newsletterForm">
+
+        <input
+            type="email"
+            id="newsletterEmail"
+            placeholder="Your email address"
+            required
+        >
+
+        <button type="submit">
+            Subscribe
+        </button>
+
+    </form>
+
+    <p
+        class="form-error"
+        id="newsletterMsgArea"
+    ></p>
+
+</section>
+
+</main>
+
+
+<!-- =====================================================
+     FOOTER
+     ===================================================== -->
+
+<footer class="footer">
+
+    <div class="footer-container">
+
+        <div>
+
+            <h3>Tech Store</h3>
+
+            <p>
+                Your trusted source for laptops, phones,
+                accessories, and gaming gear.
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <h4>Quick Links</h4>
+
+            <ul class="footer-links">
+
+                <li>
+                    <a href="#products">Products</a>
+                </li>
+
+                <li>
+                    <a href="#deals">Deals</a>
+                </li>
+
+                <li>
+                    <a href="#about">About</a>
+                </li>
+
+                <li>
+                    <a href="#contact">Contact</a>
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <div>
+
+            <h4>Categories</h4>
+
+            <ul class="footer-links">
+
+                <li>
+                    <a href="#products">Laptops</a>
+                </li>
+
+                <li>
+                    <a href="#products">Phones</a>
+                </li>
+
+                <li>
+                    <a href="#products">Accessories</a>
+                </li>
+
+                <li>
+                    <a href="#products">Gaming</a>
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <div>
+
+            <h4>Follow Us</h4>
+
+            <p>
+                Instagram · Twitter · Facebook
+            </p>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<script src="tech.js"></script>
+
+</body>
+</html>
