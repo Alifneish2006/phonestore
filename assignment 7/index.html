@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JavaScript Final Assignment</title>
+</head>
+<body>
+
+  <h1 id="main-title">Products Management App</h1>
+
+  <input type="text" id="productName" placeholder="Enter product name">
+  <input type="number" id="productPrice" placeholder="Enter product price">
+  <input type="text" id="productCategory" placeholder="Enter category">
+
+  <br><br>
+
+  <button onclick="drawProducts()">Show Products</button>
+  <button onclick="addProduct()">Add Product</button>
+  <button onclick="deleteLastProduct()">Delete Last Product</button>
+  <button onclick="calculateTotal()">Calculate Total</button>
+  <button onclick="showExpensiveProducts()">Show Expensive Products</button>
+  <button onclick="sortProductsByPrice()">Sort Products By Price</button>
+  <button onclick="checkProducts()">Check Products</button>
+  <button onclick="loadPosts()">Load Posts</button>
+
+  <br><br>
+
+  <button onclick="openFacebook()">Open Facebook</button>
+  <button onclick="closeFacebook()">Close Facebook</button>
+  <button onclick="showScreenInfo()">Show Screen Info</button>
+  <button onclick="goToGoogle()">Go To Google</button>
+
+  <br><br>
+
+  <button onclick="startTimeout()">Start Timeout</button>
+  <button onclick="stopTimeout()">Stop Timeout</button>
+  <button onclick="startCounter()">Start Counter</button>
+  <button onclick="stopCounter()">Stop Counter</button>
+
+
+  <br>
+  <br>
+  <button onclick="filterByCategory('electronics')">
+    Electronics
+</button>
+
+<button onclick="filterByCategory('accessories')">
+    Accessories
+</button>
+
+<button onclick="drawProducts()">
+    Show All
+</button>
+
+<div id="result"></div>
+  <h2 id="counter">0</h2>
+
+  <div id="result"></div>
+
+  <div id="product_set">ipad pro</div>
+
+
+  <script src="script.js"></script>
+</body>
+</html>

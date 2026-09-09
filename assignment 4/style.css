@@ -1,0 +1,117 @@
+ :root {
+    --bg: #14161b;
+    --panel: #1c1f26;
+    --line: #2a2e37;
+    --text: #eae8e1;
+    --muted: #9aa0ab;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    padding: 56px 24px;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+
+  h1 {
+    max-width: 760px;
+    margin: 0 auto 8px;
+    font-size: 1.6rem;
+    font-weight: 600;
+  }
+
+  p.sub {
+    max-width: 760px;
+    margin: 0 auto 48px;
+    color: var(--muted);
+    font-size: 0.95rem;
+  }
+
+  .grid {
+    max-width: 760px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    perspective: 1000px; /* gives the rotateX/rotateY a real vanishing point */
+  }
+
+  @media (max-width: 680px) {
+    .grid { grid-template-columns: 1fr; }
+  }
+
+  .card {
+    position: relative;
+    height: 260px;
+    border-radius: 14px;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+    transform-style: preserve-3d;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    will-change: transform;
+  }
+
+  .card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.1) 55%, rgba(0,0,0,0) 100%);
+  }
+
+  .card-label {
+    position: absolute;
+    left: 16px;
+    bottom: 14px;
+    z-index: 1;
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+  }
+
+  /* Background images */
+  .card-1 { background-image: url('https://picsum.photos/id/1015/500/600'); }
+  .card-2 { background-image: url('https://picsum.photos/id/1043/500/600'); }
+  .card-3 { background-image: url('https://picsum.photos/id/1069/500/600'); }
+
+  /* Cards 1 & 2: full 360° flip on hover, using a longer transition so the spin is visible */
+  .card-1,
+  .card-2 {
+    transition: transform 0.9s ease, box-shadow 0.4s ease;
+  }
+
+  .card-1:hover {
+    transform: rotateY(360deg);
+    box-shadow: 0 20px 34px rgba(0, 0, 0, 0.5);
+  }
+
+  .card-2:hover {
+    transform: rotateX(360deg);
+    box-shadow: 0 20px 34px rgba(0, 0, 0, 0.5);
+  }
+
+  /* Card 3: subtle tilt on hover, for comparison */
+  .card-3:hover {
+    transform: rotateX(14deg) rotateY(14deg) scale(1.03);
+    box-shadow: 0 20px 34px rgba(0, 0, 0, 0.5);
+  }
+
+  code {
+    background: #101216;
+    padding: 1px 6px;
+    border-radius: 4px;
+    font-size: 0.85em;
+  }
+
+  footer {
+    max-width: 760px;
+    margin: 40px auto 0;
+    color: var(--muted);
+    font-size: 0.85rem;
+    border-top: 1px solid var(--line);
+    padding-top: 16px;
+  }

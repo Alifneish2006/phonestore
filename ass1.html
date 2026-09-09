@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ass1</title>
+
+    <style>
+       body{
+    color: #333;
+}
+
+p{
+    font-size: 16px;
+}
+
+.sec1{
+    width:auto;
+    padding: 10px;
+
+    border-bottom: 1px solid black; 
+}
+
+.form_sec{
+    border-bottom: 1px solid black;
+
+}
+
+form{
+    
+    padding: 10px 5px;
+    margin: 10px 5px;
+}
+
+button{
+    padding: 10px 5px;
+    margin: 10px 3px 0;
+    border: 1px solid blue;
+    color: black;
+    align-self: flex-start;
+}
+
+.desc_list{
+    border-bottom:1px solid black;
+}
+
+table{
+    border-radius: 1px solid black;
+    border-collapse: collapse;
+}
+
+table th,td,tr{
+    border:1px solid black;
+}
+
+.table_sec{
+    border-bottom:1px solid black;
+}
+    </style>
+</head>
+<body>
+
+    <section class="sec1">
+    <div class="">
+
+    <h1>this is heading 1</h1>
+    <h2>this is heading 2</h2>
+    <h3>this is heading 3</h3>
+    <h4>this is heading 4</h4>
+    <h5>this is heading 5</h5>
+    <h6>this is heading 6</h6>
+
+    <p>this is a paragraph. html is used to buld web pages</p>
+    <img src="" alt="Example image">
+
+    <p>old price: <del> $100</del> New price : $80</p>
+
+    <a href="">visit google</a>
+    <a href="">visit youtube</a>
+
+    </div>
+    </section>
+   
+
+    <section class="form_sec"> 
+    <form action="" method="post">
+
+    <label for="">username</label>
+    <input type="text" name="Username" placeholder="Enter your username"><br>
+
+    <label for="">password</label>
+    <input type="password" name="Password" placeholder="Enter your password"><br>
+    
+    <label for="">choose your gender</label><br>
+
+    <input type="radio" name="Male">
+    <label for="">male</label>
+
+    <input type="radio" name="Female">
+    <label for="">female</label><br>
+   
+
+    <label for="">choose your skills</label><br>
+    <input type="checkbox">
+    <label for="">html</label>
+    <input type="checkbox">
+    <label for="">css</label>
+    <input type="checkbox">
+    <label for="">js</label><br>
+
+    <button type="button">submit</button>
+
+    </form>
+    
+    </section>
+
+    <div class="desc_list">
+        <h1>Description list</h1>
+    <dl>
+        <dt>html</dt>
+        <dd>HyperText Markup Language</dd>
+
+        <dt>
+            css
+        </dt>
+        <dd>Cascading Style Sheets</dd>
+    </dl>
+  </div>
+
+
+   <section class="table_sec">
+    <h1>students table</h1>
+
+    <table>
+        <tr>
+            <th>name</th>
+            <th>course</th>
+            <th>grade</th>
+        </tr>
+       
+        <tr>
+            <td>hasan</td>
+            <td>html</td>
+            <td>90</td>
+        </tr>
+        <tr>
+            <td>ali</td>
+            <td>css</td>
+            <td>80</td>
+        </tr>
+
+        <tr>
+            <td>ahmadS</td>
+            <td>js</td>
+            <td>70</td>
+        </tr>
+
+        <tr>
+            <td colspan="2">average</td>
+            
+            <td>85</td>
+        </tr>
+
+
+    </table>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

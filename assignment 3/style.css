@@ -1,0 +1,82 @@
+.box{
+    width: 150px;
+    height: 150px;
+    position: absolute;
+
+}
+
+.ani1{
+    background-color: blue;
+    top: 0;
+    left:0;
+    animation-name: animation1;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.ani2{
+    background-color: black;
+    top: 160px;
+    left: 0;
+    animation-name: animation1;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes animation1{
+    0%{
+        left: 0;
+    }
+
+    50%{
+        left: 625px;
+
+    }
+
+    100%{
+
+        left: 1350px;
+
+    }
+}
+
+
+.ani3{
+    background-color: red;
+    right:0;
+    top: 350px;
+    animation-name: animation2;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.ani4{
+    background-color: green;
+    top: 510px;
+    right: 0;
+    animation-name: animation2;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+
+@keyframes animation2{
+    0%{
+        right: 0;
+    }
+
+    50%{
+        right: 625px;
+
+    }
+
+    100%{
+
+        right: 1350px;
+
+    }
+}
